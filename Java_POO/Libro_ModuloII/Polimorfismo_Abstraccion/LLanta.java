@@ -17,10 +17,77 @@ public class Llanta {
 
 //Método constructor (con sobrescritura de métodos):
 
-public Llanta (int cantidad, int medida){
+  public Llanta (int cantidad, int medida){
 
-  if (cantidad )
+    double precio = 0;
 
-}
+    if (cantidad >= 3 && medida == 13){
+      precio = (double)cantidad*600.0;
+      System.out.println("El total a pagar es: " + precio);
+    }
 
-}
+      else if (cantidad < 3 && medida == 13) {
+        precio = (double)cantidad*800.0;
+        System.out.println("El total a pagar es: " + precio);
+      }
+
+        else if (cantidad >= 3 && medida == 14) {
+          precio = (double)cantidad*800.0;
+          System.out.println("El total a pagar es: " + precio);
+        }
+
+          else if (cantidad < 3 && medida == 14) {
+            precio = (double)cantidad*900.0;
+            System.out.println("\nEl total a pagar es: $" +  precio);
+          }
+
+           else {
+              System.out.println("No se ingresó una medida registrada.");
+           }
+
+    }
+
+
+    //El segundo método constructor
+    public Llanta(int cantidad, int medida, String marca){
+
+      double precio = 0.0;
+      //float descuento;
+      //float total;
+
+        if (cantidad >= 3 && medida == 13) {
+            precio = (double)cantidad*600.0;
+        }
+          else if (cantidad < 3 && medida == 13) {
+              precio = (double)cantidad*800.0;
+          }
+            else if (cantidad >= 3 && medida == 14) {
+              precio = (double)cantidad*800.0;
+            }
+              else if (cantidad >= 3 && medida == 14) {
+                precio = (double)cantidad*900.0;
+              }
+
+                if (marca == "patito") {
+                  precio = precio*0.95;
+                }
+
+                //Imprimos el resultado:
+                System.out.println("\nEl total a pagar es: $" + precio);
+
+      }
+
+      /*public Llanta(int cantidad, int medida, String temporada, String marca){
+
+        double precio = 0.0;
+
+          if (medida == 14) {
+            precio = (double)cantidad*1200;
+            System.out.println("El total a pagar es: " +  precio);
+          } else {
+            precio = (double)cantidad*950;
+            System.out.println("El total a pagar es: " +  precio);
+          }
+
+      }*/
+  }
